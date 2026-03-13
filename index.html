@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kryumo | Software Engineering</title>
+    <meta name="description"
+        content="Portfólio de Kryumo – Estudante de Engenharia de Software apaixonado por tecnologia e inovação." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Outfit:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <canvas id="canvas-bg"></canvas>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo">
+            <span class="logo-bracket">&lt;</span>
+            <span class="logo-name">kryumo</span>
+            <span class="logo-bracket"> /&gt;</span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#hero" class="nav-link" data-id="nav-home">home</a></li>
+            <li><a href="#about" class="nav-link" data-id="nav-about">sobre</a></li>
+            <li><a href="#skills" class="nav-link" data-id="nav-skills">skills</a></li>
+            <li><a href="#contact" class="nav-link" data-id="nav-contact">contato</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-tag">&lt; Software Engineer Student /&gt;</div>
+            <h1 class="hero-title">
+                Olá, eu sou<br />
+                <span class="gradient-text">Kryumo</span>
+            </h1>
+            <p class="hero-subtitle">
+                <span class="typing-cursor">|</span>
+                <span id="typing-text"></span>
+            </p>
+            <div class="hero-buttons">
+                <a href="https://github.com/kryumo" target="_blank" class="btn btn-primary" id="btn-github">Ver
+                    Projetos</a>
+                <a href="#contact" class="btn btn-ghost" id="btn-contact">Contato</a>
+            </div>
+            <div class="hero-scroll-indicator">
+                <span>scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-window">
+                <div class="code-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="code-filename">kryumo.py</span>
+                </div>
+                <div class="code-body">
+                    <pre><code><span class="kw">class</span> <span class="cls">Kryumo</span>:
+    <span class="kw">def</span> <span class="fn">__init__</span>(self):
+        self.nome     = <span class="str">"Kryumo"</span>
+        self.area     = <span class="str">"Eng. Software"</span>
+        self.paixoes  = [
+            <span class="str">"clean code"</span>,
+            <span class="str">"sistemas"</span>,
+            <span class="str">"open source"</span>,
+        ]
+        self.modo     = <span class="str">"always learning"</span>
+
+    <span class="kw">def</span> <span class="fn">hello_world</span>(self):
+        <span class="kw">return</span> <span class="str">"Vamos construir</span>
+               <span class="str"> algo incrível! "</span></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// 01</span>
+                <h2 class="section-title">Sobre <span class="gradient-text">mim</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Sou estudante de <strong>Engenharia de Software</strong> apaixonado por transformar ideias em
+                        soluções tecnológicas elegantes. Acredito que o bom código é aquele que não só funciona, mas que
+                        é legível, escalável e bonito.</p>
+                    <p>Estou sempre explorando novas tecnologias, contribuindo para projetos e expandindo minhas
+                        habilidades no desenvolvimento de software.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="2">0</span>
+                            <span class="stat-label">Anos estudando</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="5">0</span>
+                            <span class="stat-label">Projetos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="5">0</span>
+                            <span class="stat-label">Tecnologias</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-photo-wrap">
+                    <img src="../jpeg/IMG_20240701_160947_063.jpg" alt="Foto de Kryumo" class="about-photo" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// 02</span>
+                <h2 class="section-title">Tech <span class="gradient-text">Stack</span></h2>
+            </div>
+            <div class="skills-grid">
+
+                <div class="skill-category reveal">
+                    <h3 class="category-title"><span class="icon">⚡</span> Languages</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-level="85">
+                            <div class="skill-name"><span>Python</span><span class="skill-percent">85%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="55">
+                            <div class="skill-name"><span>JavaScript</span><span class="skill-percent">55%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="70">
+                            <div class="skill-name"><span>C / C++</span><span class="skill-percent">70%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="70">
+                            <div class="skill-name"><span>Java</span><span class="skill-percent">70%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category reveal">
+                    <h3 class="category-title"><span class="icon"></span> Web</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-level="80">
+                            <div class="skill-name"><span>HTML & CSS</span><span class="skill-percent">80%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="50">
+                            <div class="skill-name"><span>React</span><span class="skill-percent">50%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="45">
+                            <div class="skill-name"><span>Node.js</span><span class="skill-percent">45%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category reveal">
+                    <h3 class="category-title"><span class="icon"></span> Tools</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-level="88">
+                            <div class="skill-name"><span>Git / GitHub</span><span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="72">
+                            <div class="skill-name"><span>Linux</span><span class="skill-percent">72%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="60">
+                            <div class="skill-name"><span>Docker</span><span class="skill-percent">60%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// 03</span>
+                <h2 class="section-title">Vamos <span class="gradient-text">conversar</span></h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-text reveal">
+                    <p>Estou sempre aberto a novas oportunidades, colaborações e projetos interessantes. Me manda uma
+                        mensagem!</p>
+                    <div class="contact-links">
+                        <a href="mailto:gleysonl180@gmail.com" class="contact-card" id="contact-email">
+                            <span class="contact-icon"></span>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">gleysonl180@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/kryumo" target="_blank" class="contact-card" id="contact-github">
+                            <span class="contact-icon"></span>
+                            <div>
+                                <span class="contact-label">GitHub</span>
+                                <span class="contact-value">github.com/kryumo</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/devgleyson" target="_blank" class="contact-card"
+                            id="contact-linkedin">
+                            <span class="contact-icon"></span>
+                            <div>
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value">in/kryumo</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form reveal" id="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" placeholder="Seu nome" autocomplete="off" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="off" />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Sua mensagem..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width" id="btn-send">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <p>Feito com <span class="heart">♥</span> por <span class="gradient-text">Kryumo</span> &mdash; &copy; 2026
+            </p>
+            <p class="footer-code"><span class="kw">while</span>(alive) { code(); learn(); repeat(); }</p>
+        </div>
+    </footer>
+
+    <script src="js.js"></script>
+</body>
+
+</html>
